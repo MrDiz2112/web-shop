@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Контакты | Магазин ProPC Shop
+{% endblock %}
+
+{% block content %}
+    <div class="content container">
+        <div class="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A7cb2eeb1ebd4e078ec9a513d6e4f186d804fe2a29ca812e041f8b81606a9b140&amp;source=constructor"
+                    width="100%" height="400" frameborder="0"></iframe>
+        </div>
+
+        <div class="contacts">
+            <div class="text">
+                <h2><u>Наши соцсети</u></h2>
+                <p>
+                    <a class="social-btn" href="http://vk.com" title="ВКонтакте">
+                        <img class="vk" src="{% static "img/vk.png" %}" alt="ВКонтакте">
+                    </a>
+                    <a class="social-btn inst" href="https://www.instagram.com/" title="Instagram">
+                        <img class="inst" src="{% static "img/inst.png" %}" alt="Instagram">
+                    </a>
+                </p>
+
+                <h2><u>Наши реквизиты</u></h2>
+                <p>
+                    <b>Наш адрес: </b>г.Ростов-на-Дону, ул. Проспект 40-летия Победы, д. 85</p>
+                <p>
+                    <b>Телефон: </b>8-800-555-35-35
+                </p>
+                <p>
+                    <b>E-mail: </b> <a href="mailto:diz2012x@gmail.com" title="Написать нам">diz2012x@gmail.com</a>
+                </p>
+
+                <h2><u>Как нас найти</u></h2>
+                <p>Торговый центр "Мир", второй этаж, напротив магазина "Ситилинк".</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

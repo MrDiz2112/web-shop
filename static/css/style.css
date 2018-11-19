@@ -1,0 +1,437 @@
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "arial", sans-serif;
+    color: #404040;
+    background: url("../img/backgrounds/dark_geometric.png") fixed;
+}
+
+/*==========Хедер==========*/
+
+.header, .footer {
+    padding: 10px;
+    color: #c3c3c3;
+    background-color: #363636;
+    background: url("../img/backgrounds/px_by_Gre3g.png");
+    font-family: "tahoma", sans-serif;
+}
+
+.header {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.header-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-nav {
+    clear: both;
+    display: inline-block;
+    list-style: none;
+    padding: 0 0;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.main-nav li {
+    display: inline-block;
+    border: 2px solid #a38b70;
+    background-color: #a38b70;
+    text-transform: uppercase;
+    border-radius: 3px;
+    width: 150px;
+    padding: 5px 10px;
+    margin: 0px;
+}
+
+.main-nav li:hover {
+    border-color: #78abe6;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-nav a:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.main-nav .active {
+    background-color: #a38b70;
+}
+
+.cart-div {
+    display: inline-block;
+    float: right;
+    margin: 10px 0;
+}
+
+.cart-div .menu-cart {
+    border: 2px solid #a38b70;
+    padding: 5px 15px;
+
+    color: #ffffff;
+    font: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #323232;
+    border-radius: 3px;
+}
+
+.cart-pic {
+    display: inline-block;
+    padding-right: 10px !important;
+}
+
+.cart-div .btn:hover {
+    border-color: #78abe6;
+}
+
+/*==========Контент==========*/
+
+.main {
+    display: flex;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 45px;
+    font-family: "Georgia", serif;
+    color: #a38b70;
+}
+
+.hello {
+    text-align: center;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 45px;
+    font-family: "Georgia", serif;
+    color: #a38b70;
+}
+
+.features td {
+    width: 33%;
+}
+
+.features p,
+.features h3 {
+    text-align: center;
+}
+
+.features p:first-child {
+    margin-bottom: 10px;
+}
+
+.features h3 {
+    margin-top: 0px;
+}
+
+.features .middle {
+    border-left: 1px solid #54dace;
+    border-right: 1px solid #54dace;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotateY(0);
+    }
+    to {
+        transform: rotateY(1turn);
+    }
+}
+
+.features td img {
+    animation: spin 2s ease;
+}
+
+.features td p:first-child {
+    perspective: 1000px;
+}
+
+.price-list {
+    width: 100%;
+
+    border-collapse: collapse;
+    line-height: 30px;
+}
+
+.price-list th {
+    font-size: 14px;
+    text-align: center;;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.price-list th:first-child {
+    text-align: left;
+}
+
+.price-list td {
+    border: 1px solid #d8d8d8;
+}
+
+.price-list th,
+.price-list td {
+    padding: 5px 10px;
+}
+
+.price-list tr > td:first-child {
+    font-weight: bold;
+}
+
+.price-list tr > td:last-child {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.map {
+    padding: 20px;
+    float: left;
+    box-sizing: border-box;
+    width: 40%;
+}
+
+.map img {
+    width: 100%;
+}
+
+.contacts {
+    float: right;
+    box-sizing: border-box;
+    width: 60%;
+    padding-left: 15px;
+    text-align: left;
+}
+
+/*==========Каталог========*/
+
+.product_list {
+    border-left: 1px solid #737373;
+}
+
+.product_list h1 {
+    padding: 10px;
+    background: #323232;
+    color: white;
+    border-radius: 3px;
+}
+
+#sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#sidebar ul li {
+    padding: 5px 10px;
+}
+
+#sidebar ul li.selected {
+    background: #323232;
+    color: white;
+    border-radius: 3px;
+}
+
+#sidebar ul li.selected a {
+    color: white;
+}
+
+.items {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.item .desc {
+
+}
+
+.item a {
+    margin: 0 auto;
+}
+
+.item a img {
+    max-height: 200px;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.product-detail h1 {
+    padding: 10px;
+    background: #323232;
+    color: white;
+    border-radius: 10px;
+}
+
+.product-detail .picture {
+    padding: 20px;
+}
+
+.product-detail h2 {
+    font-size: 1.2em;
+}
+
+.product-detail .product-info {
+    border-radius: 10px;
+    padding: 20px;
+    background: darkgray;
+}
+
+.product-detail .product-info p {
+    margin: 0;
+
+}
+
+/*==========Контакты=======*/
+
+.contacts .text .social-btn img {
+    max-width: 50px;
+}
+
+/*==========Футер==========*/
+
+.footer {
+    clear: both;
+}
+
+.footer-social {
+    float: left;
+}
+
+.footer-social img {
+    width: 25px;
+    vertical-align: bottom;
+}
+
+.footer-counter {
+    float: right;
+}
+
+.footer-copyright {
+    clear: both;
+    text-align: center;
+}
+
+/*=========Корзина===========*/
+
+form.add {
+    margin-bottom: 10px;
+}
+
+form.add label {
+    margin-right: 10px;
+}
+
+#id_quantity {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+form.add input[type="submit"] {
+    background: #2a6496;
+    border-radius: 3px;
+    border: 0;
+    padding: 5px 10px;
+    color: white;
+}
+
+.cart {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.cart th {
+    text-align: center;
+}
+
+.cart td {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+th, td {
+    padding: 10px;
+}
+
+thead {
+    background: #323232;
+    color: white;
+
+}
+
+.total {
+    background: lightgrey;
+}
+
+.total td {
+
+}
+
+.total-text {
+    text-align: right;
+}
+
+.btn {
+    background: #2a6496;
+    color: white;
+}
+
+.btn-light {
+    background: #323232;
+}
+
+.order-info h2 {
+    margin-bottom: 20px;
+}
+
+.order-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.order-form label {
+    display: block;
+}
+
+.order-form input {
+    width: 100%;
+    padding: 5px 10px;
+}

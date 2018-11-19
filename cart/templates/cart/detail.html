@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Ваша корзина товаров
+{% endblock %}
+
+{% block content %}
+    <div class="content container">
+        <h1>Ваша корзина товаров</h1>
+        <table class="table table-responsive cart">
+            <thead>
+            <tr>
+                <th class="col-sm-1">Изображение</th>
+                <th class="col-sm-4">Продукт</th>
+                <th class="col-sm-1">Кол-во</th>
+                <th class="col-sm-2">Цена</th>
+                <th class="col-sm-3">Полная цена</th>
+                <th class="col-sm-1"></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in cart %}
+                {% with product=item.product %}
+                    <tr>
+                        <td>
+                            <a href="{{ product.get_absolute_url }}">
+                                <img class="img-responsive" src="{{ product.image.url }}" alt=""/>
+                            </a>
+                        </td>
+                        <td>{{ product.name }}</td>
+                        <td>
+                            <form action="{% url "cart:CartAdd" product.id %}" method="post" class="add">
+                                {{ item.update_quantity_form.quantity }}
+                                {{ item.update_quantity_form.update }}
+                                {% csrf_token %}
+                                <input type="submit" value="Обновить">
+                            </form>
+                        </td>
+                        <td class="num">{{ item.price }} руб.</td>
+                        <td class="num">{{ item.total_price }} руб.</td>
+                        <td><a href="{% url "cart:CartRemove" product.id %}">Удалить</a></td>
+                    </tr>
+                {% endwith %}
+            {% endfor %}
+            <tr class="total">
+                <td colspan="3"></td>
+                <td class="total-text"><strong>Всего:</strong></td>
+                <td class="num">{{ cart.get_total_price }} руб.</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+        <p class="text-right">
+            <a href="{% url "shop:ProductList" %}" class="btn btn-light">Продолжить Шопинг</a>
+            <a href="{% url "orders:OrderCreate" %}" class="btn">Оформить заказ</a>
+        </p>
+    </div>
+{% endblock %}

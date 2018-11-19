@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Магазин ProPC Shop
+{% endblock %}
+
+{% block content %}
+    <div class="content container">
+        <h2 class="section-title">Добро пожаловать в наш магазин!</h2>
+
+        <p class="hello">В нашем магазине вы сможете купить различные комплектующие для ПК.</p>
+
+        <h2 class="section-title">Почему мы?</h2>
+
+        <table class="features">
+          <tr>
+            <td>
+              <p><img src="{% static "img/feature-1.png" %}" alt=""></p>
+              <h3>Выбор</h3>
+              <p>Вас приятно удивит широта нашего ассортимента.</p>
+            </td>
+            <td class="middle">
+              <p><img src="{% static "img/feature-2.png" %}" alt=""></p>
+              <h3>Качество</h3>
+              <p>Наши товары не ломаются сразу же после покупки.</p>
+            </td>
+            <td>
+              <p><img src="{% static "img/feature-3.png" %}" alt=""></p>
+              <h3>Помощь</h3>
+              <p>Мы поможем вам с выбором и сборкой. И при этом бесплатно.</p>
+            </td>
+          </tr>
+        </table>
+
+    </div>
+{% endblock %}

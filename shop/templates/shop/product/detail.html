@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    {{ product.name }} | Магазин ProPC Shop
+{% endblock %}
+
+{% block content %}
+    <div class="product-detail content container">
+        <div class="picture col-sm-4">
+            <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/noimage.png" %}{% endif %}"
+                 class="img-responsive">
+        </div>
+
+        <div class="col-sm-8">
+            <h1>{{ product.name }}</h1>
+            <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+            <p class="price">
+                {{ product.price }} руб.
+            </p>
+
+            <form class="add" action="{% url "cart:CartAdd" product.id %}" method="post">
+                {{ cart_product_form }}
+                {% csrf_token %}
+                <input type="submit" value="Добавить в корзину">
+            </form>
+
+            <div class="product-info">
+                <span>
+                    {{ product.description | linebreaks }}
+                </span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
