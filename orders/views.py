@@ -23,9 +23,18 @@ def OrderCreate(request):
                                          price=item['price'],
                                          quantity=item['quantity'])
             cart.clear()
-            return render(request, 'orders/order/created.html', {'order': order})
+            return render(request, 'orders/order/paid.html', {'order': order})
 
     form = OrderCreateForm()
 
     return render(request, 'orders/order/create.html', {'cart': cart,
                                                         'form': form})
+
+
+def OrderCreated(request):
+    try:
+        order_id = request.GET['order-id']
+    except:
+        order_id = None
+
+    return render(request, 'orders/order/created.html', {'order_id': order_id})
