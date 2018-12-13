@@ -431,7 +431,19 @@ thead {
     display: block;
 }
 
-.order-form input {
-    width: 100%;
-    padding: 5px 10px;
+.receipt {
+    background: #c3c3c3 !important;
+    border-radius: 10px !important;
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px
+}
+
+.receipt h2 {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.receipt p {
+    text-decoration: underline;
 }

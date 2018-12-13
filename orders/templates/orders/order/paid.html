@@ -6,13 +6,15 @@
 
 {% block content %}
     <div class="content container">
-        <h2>Оплата заказа <u>#{{ order.id }}</u></h2>
-        <p>Сумма к оплате: <b>{{ order.get_total_cost }}</b></p>
+        <div class="receipt text-center">
+            <h2>Оплата заказа <u>#{{ order.id }}</u></h2>
+            <p>Сумма к оплате: <b>{{ order.get_total_cost }}</b></p>
 
-        <form action="{% url "orders:OrderCreated" %}" method="get">
-            <input name="order-id" type="text" value="{{ order.id }}" hidden>
-            <input class="btn" type="submit" value="Оплатить">
-        </form>
+            <form action="{% url "orders:OrderCreated" %}" method="get">
+                <input name="order-id" type="text" value="{{ order.id }}" hidden>
+                <input class="btn" type="submit" value="Оплатить">
+            </form>
+        </div>
     </div>
 
 {% endblock %}
